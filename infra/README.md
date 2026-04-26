@@ -1,16 +1,5 @@
 # Infra
 
-## 목표
+현재 단계에서는 Docker 기반 인프라를 사용하지 않고 로컬 개발 환경을 사용한다.
 
-개발환경을 Docker Compose로 구성한다.
-
-## 구성 후보
-
-- PostgreSQL
-- Backend FastAPI
-- Frontend React
-- Adminer 또는 pgAdmin 선택
-
-## 우선순위
-
-MVP 초반에는 PostgreSQL만 Docker로 띄우고, backend/frontend는 로컬 개발 서버로 실행해도 된다.
+필요 시 추후 배포/검증 단계에서 인프라 구성을 다시 추가한다.
