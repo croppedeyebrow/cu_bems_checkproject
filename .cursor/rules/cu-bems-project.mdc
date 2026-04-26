@@ -1,0 +1,43 @@
+---
+description: CU-BEMS 스마트빌딩 프로젝트 전역 개발 규칙
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# CU-BEMS Project Rules
+
+이 프로젝트는 CU-BEMS 기반 스마트빌딩 에너지 예측·이상탐지 디지털트윈 대시보드이다.
+
+## 반드시 참조할 문서
+
+- `PROJECT_CONTEXT.md`
+- `docs/00_project_overview.md`
+- `docs/04_database_design.md`
+- `docs/05_etl_pipeline.md`
+- `docs/07_api_design.md`
+
+## 구현 우선순위
+
+1. DB schema
+2. ETL pipeline
+3. Aggregation tables
+4. FastAPI APIs
+5. ML prediction
+6. Anomaly detection
+7. React dashboard
+
+## 금지 사항
+
+- CU-BEMS 외의 Kaggle 데이터셋을 섞지 않는다.
+- MongoDB를 추가하지 않는다.
+- 원본 CSV 컬럼 구조를 그대로 서비스 테이블로 사용하지 않는다.
+- 1분 단위 measurements를 대시보드에서 무제한 조회하지 않는다.
+- 인증/권한 기능을 MVP 초기에 넣지 않는다.
+
+## 코드 작성 원칙
+
+- 변경 이유가 명확해야 한다.
+- DB schema와 API schema는 문서와 일치해야 한다.
+- 임시 코드는 TODO 주석으로 표시한다.
+- 복잡한 로직은 service 계층으로 분리한다.

@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+
+# Node
+node_modules/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# Data
+data/raw/
+data/processed/
+*.csv
+
+# OS
+.DS_Store
+Thumbs.db

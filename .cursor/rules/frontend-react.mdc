@@ -1,0 +1,20 @@
+---
+description: React 프론트엔드 코드 작성 규칙
+globs:
+  - "frontend/**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# Frontend React Rules
+
+- React + TypeScript 기준으로 작성한다.
+- 화면은 다음 페이지를 기준으로 분리한다.
+  - Overview
+  - FloorView
+  - ZoneView
+  - PredictionView
+  - AnomalyView
+- API 호출 로직은 `src/api/`에 둔다.
+- 차트 컴포넌트는 `src/components/charts/`에 둔다.
+- 타입은 `src/types/`에 둔다.
+- UI는 기능 이해가 우선이며 과한 애니메이션을 넣지 않는다.

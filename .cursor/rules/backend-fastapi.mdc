@@ -1,0 +1,19 @@
+---
+description: FastAPI 백엔드 코드 작성 규칙
+globs:
+  - "backend/**/*.py"
+alwaysApply: false
+---
+
+# Backend FastAPI Rules
+
+- FastAPI 앱은 `app/main.py`에서 생성한다.
+- Router는 도메인별로 분리한다.
+  - `app/api/routes/imports.py`
+  - `app/api/routes/metadata.py`
+  - `app/api/routes/dashboard.py`
+  - `app/api/routes/predictions.py`
+  - `app/api/routes/anomalies.py`
+- SQLAlchemy model, Pydantic schema, service, repository를 분리한다.
+- API 경로는 `docs/07_api_design.md`와 일치시킨다.
+- 대시보드 API는 집계 테이블을 우선 조회한다.
